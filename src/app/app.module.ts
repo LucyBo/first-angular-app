@@ -11,7 +11,6 @@ import { NewCourseFormComponent } from './signup-form/new-course-form.component.
 @NgModule({
   declarations: [
     AppComponent,
-    SignupFormComponent,
     CoursesComponent,
     SummaryPipe,
     InputFormatDirective,
