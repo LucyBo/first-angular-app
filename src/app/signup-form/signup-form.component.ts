@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { UsernameValidators } from './username.validators';
 
+
 @Component({
   selector: 'signup-form',
   templateUrl: './signup-form.component.html',
@@ -9,14 +10,19 @@ import { UsernameValidators } from './username.validators';
 })
 export class SignupFormComponent {
   form = new FormGroup({
-    'username': new FormControl("",
+    username: new FormControl('',
       Validators.required,
       UsernameValidators.shouldBeUnique),
-    'password': new FormControl("", Validators.required)
+    password: new FormControl('', Validators.required)
   });
 
+  login() {
+      this.form.setErrors({
+        invalidLogin: true
+      });
+    }
   get username() {
     return this.form.get('username');
-  }
+  };
 }
 
