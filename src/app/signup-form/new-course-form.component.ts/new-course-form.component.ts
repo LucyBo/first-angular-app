@@ -16,7 +16,7 @@ export class NewCourseFormComponent {
     topic.value=" ";
   }
   removeTopic(topic: FormControl) {
-    this.topics.controls.indexOf(topic);
+    let index = this.topics.controls.indexOf(topic);
     this.topics.removeAt(index);
   }
   get topics() {
