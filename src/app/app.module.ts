@@ -6,7 +6,8 @@ import { SummaryPipe } from './summary.pipe';
 import { InputFormatDirective } from './input-format.directive';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NewCourseFormComponent } from './signup-form/new-course-form.component.ts/new-course-form.component';
+import { NewCourseFormComponent } from './new-course-form.component.ts/new-course-form.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NewCourseFormComponent } from './signup-form/new-course-form.component.
     CoursesComponent,
     SummaryPipe,
     InputFormatDirective,
-    NewCourseFormComponent
+    NewCourseFormComponent,
+    ChangePasswordComponent
     
   ],
   imports: [
