@@ -23,11 +23,11 @@ export class PostsComponent implements OnInit{
   }
   createPost(input: HTMLInputElement) {
     let post: any = {title: input.value};
+    this.posts.splice(0,0, post);
     input.value = '';
     this.service.createPost(post)
       .subscribe( response => {
         //post['id'] = response.id;
-        this.posts.splice(0,0, post);
         console.log(response);
       }, 
         error => {

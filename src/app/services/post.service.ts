@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+import {map} from 'rxjs/operators';
+import {Observable,of, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +26,8 @@ export class PostService {
 
   deletePost(post) {
     return this.http.delete(this.url + "/" + post.id)
+    //.catchError(( error:Response ) =>{
+    //  Observable.throw()
+    //});
   }
 }
