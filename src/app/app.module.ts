@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewCourseFormComponent } from './new-course-form.component.ts/new-course-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostService } from './services/post.service';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { PostsComponent } from './posts/posts.component';
     HttpClientModule,
   ],
   providers: [
-    HttpClientModule
+    HttpClientModule,
+    PostService
   ],
   bootstrap: [AppComponent]
 })
